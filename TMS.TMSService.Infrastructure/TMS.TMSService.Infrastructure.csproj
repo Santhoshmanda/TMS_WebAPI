@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.18">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.18" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Persistance\" />
+    <None Remove="Repositories\" />
+    <None Remove="Extensions.cs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistance\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Extensions.cs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMS.TMSService.Domain\TMS.TMSService.Domain.csproj" />
+  </ItemGroup>
+</Project>
